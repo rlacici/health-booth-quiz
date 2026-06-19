@@ -36,6 +36,23 @@ body {
   opacity: 0.9;
 }
 
+.start-bottom .type-card,
+.type-card {
+  background: #fafbfc;
+  border-color: #d8dee8;
+}
+
+.type-card:has(input:checked),
+.type-card.selected {
+  border-color: var(--color-primary);
+  background: #eef2f7;
+  box-shadow: 0 2px 10px rgba(30, 58, 95, 0.12);
+}
+
+.type-heading {
+  color: var(--color-primary);
+}
+
 .start-bottom .age-group,
 .age-group {
   border-color: #d0d9e6;
@@ -90,6 +107,10 @@ body {
 }
 
 .complete-time-value {
+  color: var(--color-primary);
+}
+
+.already-title {
   color: var(--color-primary);
 }
 
