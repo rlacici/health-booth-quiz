@@ -84,6 +84,7 @@ body {
 .start-card {
   justify-content: space-between;
   padding: 20px 18px 16px;
+  --start-heading-size: clamp(1.55rem, 6.8vw, 2.15rem);
 }
 
 .start-header {
@@ -98,7 +99,6 @@ body {
   gap: clamp(14px, 3vh, 22px);
   padding: 8px 2px 20px;
   width: 100%;
-  --start-heading-size: clamp(1.55rem, 6.8vw, 2.15rem);
 }
 
 .start-title,
@@ -137,12 +137,12 @@ body {
 }
 
 .type-heading {
-  font-size: clamp(1rem, 4.2vw, 1.2rem);
-  font-weight: 700;
+  font-size: var(--start-heading-size);
+  font-weight: 600;
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 10px;
-  line-height: 1.35;
+  line-height: 1.38;
   word-break: keep-all;
 }
 
@@ -584,8 +584,10 @@ body {
 
 @media (max-height: 700px) {
   html { font-size: 15px; }
-  .start-header {
+  .start-card {
     --start-heading-size: clamp(1.45rem, 6.2vw, 1.95rem);
+  }
+  .start-header {
     gap: 12px;
     padding: 6px 2px 14px;
   }
@@ -607,8 +609,10 @@ body {
 
 @media (max-height: 600px) {
   html { font-size: 14px; }
-  .start-header {
+  .start-card {
     --start-heading-size: clamp(1.35rem, 5.8vw, 1.75rem);
+  }
+  .start-header {
     gap: 10px;
   }
   .card-image-wrap { max-height: 30vh; }
