@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
   <!-- 기본 테마 -->
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
   <!-- <link rel="stylesheet" href="theme-refined.css"> -->
   <link rel="stylesheet" href="theme-lively.css">
 </head>
@@ -32,38 +32,28 @@
         </div>
 
         <div class="start-bottom">
-          <fieldset class="age-group">
-            <legend>나이대 선택 <span class="required">*</span></legend>
-            <div class="age-options">
-              <label class="age-option">
-                <input type="radio" name="age" value="10대 이하">
-                <span>10대 이하</span>
-              </label>
-              <label class="age-option">
-                <input type="radio" name="age" value="20대">
-                <span>20대</span>
-              </label>
-              <label class="age-option">
-                <input type="radio" name="age" value="30대">
-                <span>30대</span>
-              </label>
-              <label class="age-option">
-                <input type="radio" name="age" value="40대">
-                <span>40대</span>
-              </label>
-              <label class="age-option">
-                <input type="radio" name="age" value="50대">
-                <span>50대</span>
-              </label>
-              <label class="age-option">
-                <input type="radio" name="age" value="60대 이상">
-                <span>60대 이상</span>
-              </label>
-            </div>
-          </fieldset>
-          <p id="age-error" class="error hidden">나이대를 선택해주세요.</p>
+          <h2 class="type-heading">당신의 구강건강 유형은?</h2>
+          <div class="type-options" role="radiogroup" aria-label="구강건강 유형 선택">
+            <button type="button" class="type-card" data-type="lazy">
+              <span class="type-emoji">😴</span>
+              <span class="type-label">귀찮음형</span>
+            </button>
+            <button type="button" class="type-card" data-type="curious">
+              <span class="type-emoji">🤔</span>
+              <span class="type-label">궁금증형</span>
+            </button>
+            <button type="button" class="type-card" data-type="confident">
+              <span class="type-emoji">😁</span>
+              <span class="type-label">자신감형</span>
+            </button>
+            <button type="button" class="type-card" data-type="random">
+              <span class="type-emoji">🎲</span>
+              <span class="type-label">랜덤형</span>
+            </button>
+          </div>
+          <p id="type-error" class="error hidden">구강건강 유형을 선택해주세요.</p>
 
-          <button type="button" id="btn-start" class="btn btn-primary">시작하기</button>
+          <button type="button" id="btn-start" class="btn btn-primary">오늘의 카드 보기</button>
         </div>
       </div>
     </section>

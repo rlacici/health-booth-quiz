@@ -115,6 +115,7 @@ const cards = [
 
 let currentCard = null;
 let selectedOption = null;
+let selectedType = null;
 
 const screens = {
   already: document.getElementById("screen-already"),
@@ -127,7 +128,7 @@ const screens = {
 const cardImage = document.getElementById("card-image");
 const quizQuestion = document.getElementById("quiz-question");
 const quizOptions = document.getElementById("quiz-options");
-const ageError = document.getElementById("age-error");
+const typeError = document.getElementById("type-error");
 const quizError = document.getElementById("quiz-error");
 const quizWrong = document.getElementById("quiz-wrong");
 const participationTime = document.getElementById("participation-time");
@@ -210,13 +211,22 @@ function init() {
 
   showScreen("start");
 
+  document.querySelectorAll(".type-card").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      selectedType = btn.dataset.type;
+      document.querySelectorAll(".type-card").forEach((el) => {
+        el.classList.toggle("selected", el === btn);
+      });
+      typeError.classList.add("hidden");
+    });
+  });
+
   document.getElementById("btn-start").addEventListener("click", () => {
-    const ageSelected = document.querySelector('input[name="age"]:checked');
-    if (!ageSelected) {
-      ageError.classList.remove("hidden");
+    if (!selectedType) {
+      typeError.classList.remove("hidden");
       return;
     }
-    ageError.classList.add("hidden");
+    typeError.classList.add("hidden");
 
     const card = pickRandomCard();
     renderCardNews(card);

@@ -133,6 +133,74 @@ body {
   padding-top: 8px;
 }
 
+.type-heading {
+  font-size: clamp(1.15rem, 5vw, 1.45rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.type-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.type-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  background: #fffaf7;
+  border: 2px solid var(--color-border);
+  border-radius: 16px;
+  padding: 18px 20px;
+  min-height: 68px;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.type-card:active {
+  transform: scale(0.99);
+}
+
+.type-card.selected {
+  border-color: var(--color-primary);
+  background: #fff0e8;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.2);
+}
+
+.type-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.type-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.start-bottom .btn {
+  font-size: 1.15rem;
+  min-height: 54px;
+  margin-top: 4px;
+}
+
+.start-bottom .error {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
 .subtitle {
   font-size: 0.95rem;
   font-weight: 600;
@@ -162,89 +230,6 @@ body {
 .start-header .start-intro,
 .start-header .start-notice {
   font-size: var(--start-heading-size);
-}
-
-.start-bottom .age-group {
-  border: 2px solid var(--color-border);
-  border-radius: 12px;
-  padding: 14px 14px 14px;
-  margin-bottom: 10px;
-  flex: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.start-bottom .age-group legend {
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-}
-
-.start-bottom .age-option {
-  font-size: 1rem;
-  min-height: 44px;
-  padding: 10px 8px;
-}
-
-.start-bottom .age-option input[type="radio"] {
-  width: 20px;
-  height: 20px;
-}
-
-.start-bottom .btn {
-  font-size: 1.15rem;
-  min-height: 54px;
-}
-
-.age-group {
-  border: 2px solid var(--color-border);
-  border-radius: 10px;
-  padding: 8px 10px 10px;
-  margin-bottom: 8px;
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.age-group legend {
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0 4px;
-}
-
-.age-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  align-content: start;
-}
-
-.required {
-  color: var(--color-error);
-}
-
-.age-option {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 6px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.92rem;
-  min-height: 40px;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.age-option:active {
-  background: #f0f8fb;
-}
-
-.age-option input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--color-primary);
-  flex-shrink: 0;
 }
 
 .btn {
@@ -586,7 +571,8 @@ body {
     padding: 6px 2px 14px;
   }
   .card-image-wrap { max-height: 36vh; }
-  .age-option { min-height: 32px; font-size: 0.82rem; }
+  .type-card { min-height: 60px; padding: 16px 18px; }
+  .type-label { font-size: 1.1rem; }
   .btn { min-height: 44px; padding: 12px; }
   .complete-content {
     --complete-text-size: clamp(1.4rem, 6.2vw, 2.1rem);
