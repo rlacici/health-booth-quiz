@@ -533,7 +533,7 @@ body {
 .complete-answer-text {
   font-size: var(--complete-text-size);
   font-weight: 700;
-  color: var(--color-primary);
+  color: #d32f2f;
   line-height: 1.4;
   flex-shrink: 0;
   word-break: keep-all;
@@ -557,12 +557,19 @@ body {
 }
 
 .complete-staff-notice {
-  font-size: var(--complete-text-size);
-  font-weight: 600;
-  color: var(--color-text-muted);
-  line-height: 1.4;
+  width: 100%;
+  font-size: clamp(1.55rem, 7.2vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.45;
   flex-shrink: 0;
   word-break: keep-all;
+  margin: 0 0 clamp(14px, 2.2vh, 20px);
+  padding: clamp(14px, 2.5vh, 20px) clamp(12px, 3vw, 18px);
+  background: #e8f0fa;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
 }
 
 .complete-time {
