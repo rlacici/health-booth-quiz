@@ -115,7 +115,6 @@ const cards = [
 
 let currentCard = null;
 let selectedOption = null;
-let selectedType = null;
 
 const screens = {
   already: document.getElementById("screen-already"),
@@ -211,18 +210,15 @@ function init() {
 
   showScreen("start");
 
-  document.querySelectorAll(".type-card").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      selectedType = btn.dataset.type;
-      document.querySelectorAll(".type-card").forEach((el) => {
-        el.classList.toggle("selected", el === btn);
-      });
+  document.querySelectorAll('input[name="health-type"]').forEach((input) => {
+    input.addEventListener("change", () => {
       typeError.classList.add("hidden");
     });
   });
 
   document.getElementById("btn-start").addEventListener("click", () => {
-    if (!selectedType) {
+    const typeSelected = document.querySelector('input[name="health-type"]:checked');
+    if (!typeSelected) {
       typeError.classList.remove("hidden");
       return;
     }

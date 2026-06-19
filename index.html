@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
   <!-- 기본 테마 -->
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
   <!-- <link rel="stylesheet" href="theme-refined.css"> -->
   <link rel="stylesheet" href="theme-lively.css">
 </head>
@@ -34,22 +34,26 @@
         <div class="start-bottom">
           <h2 class="type-heading">당신의 구강건강 유형은?</h2>
           <div class="type-options" role="radiogroup" aria-label="구강건강 유형 선택">
-            <button type="button" class="type-card" data-type="lazy">
+            <label class="type-card">
+              <input type="radio" name="health-type" value="lazy">
               <span class="type-emoji">😴</span>
               <span class="type-label">귀찮음형</span>
-            </button>
-            <button type="button" class="type-card" data-type="curious">
+            </label>
+            <label class="type-card">
+              <input type="radio" name="health-type" value="curious">
               <span class="type-emoji">🤔</span>
               <span class="type-label">궁금증형</span>
-            </button>
-            <button type="button" class="type-card" data-type="confident">
+            </label>
+            <label class="type-card">
+              <input type="radio" name="health-type" value="confident">
               <span class="type-emoji">😁</span>
               <span class="type-label">자신감형</span>
-            </button>
-            <button type="button" class="type-card" data-type="random">
+            </label>
+            <label class="type-card">
+              <input type="radio" name="health-type" value="random">
               <span class="type-emoji">🎲</span>
               <span class="type-label">랜덤형</span>
-            </button>
+            </label>
           </div>
           <p id="type-error" class="error hidden">구강건강 유형을 선택해주세요.</p>
 
@@ -103,6 +107,6 @@
 
   <button type="button" id="btn-test-reset" class="btn-test-reset-fixed" title="테스트용">테스트 초기화</button>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
