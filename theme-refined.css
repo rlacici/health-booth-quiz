@@ -1,0 +1,100 @@
+/* 세련된 테마 — style.css 아래에 추가로 연결하세요 */
+
+:root {
+  --color-bg: #f4f6f9;
+  --color-card: #ffffff;
+  --color-primary: #1e3a5f;
+  --color-primary-dark: #152a45;
+  --color-accent: #2d6a4f;
+  --color-text: #1a2332;
+  --color-text-muted: #5c6778;
+  --color-error: #b42318;
+  --color-border: #d8dee8;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(30, 58, 95, 0.1);
+}
+
+body {
+  background: linear-gradient(165deg, #f8fafc 0%, #eef2f7 45%, #e8edf4 100%);
+  letter-spacing: -0.01em;
+}
+
+.card {
+  border: 1px solid rgba(30, 58, 95, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.start-title {
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--color-primary);
+  opacity: 0.9;
+}
+
+.start-bottom .age-group,
+.age-group {
+  border-color: #d0d9e6;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.age-option:active {
+  background: #eef2f7;
+}
+
+.btn {
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(30, 58, 95, 0.18);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.btn-primary:active {
+  background: linear-gradient(135deg, #152a45 0%, #1e3a5f 100%);
+}
+
+.card-image-wrap {
+  border: 1px solid #d0d9e6;
+  background: #fafbfc;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.option-btn {
+  background: #fafbfc;
+  border-color: #d8dee8;
+}
+
+.option-btn.selected {
+  border-color: var(--color-primary);
+  background: #eef2f7;
+  box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+}
+
+.option-btn:active {
+  background: #e4eaf2;
+}
+
+.complete-title {
+  color: var(--color-accent);
+}
+
+.complete-time {
+  border-top-color: #d8dee8;
+}
+
+.complete-time-value {
+  color: var(--color-primary);
+}
+
+.btn-test-reset-fixed {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #d0d9e6;
+  backdrop-filter: blur(6px);
+}

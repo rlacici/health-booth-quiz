@@ -1,0 +1,112 @@
+/* 활발한 테마 — style.css 아래에 추가로 연결하세요 */
+
+:root {
+  --color-bg: #fff8f0;
+  --color-card: #ffffff;
+  --color-primary: #ff6b35;
+  --color-primary-dark: #e85a28;
+  --color-accent: #00b894;
+  --color-text: #2d3436;
+  --color-text-muted: #636e72;
+  --color-error: #e74c3c;
+  --color-border: #ffd4c2;
+  --radius: 18px;
+  --shadow: 0 8px 28px rgba(255, 107, 53, 0.18);
+}
+
+body {
+  background: linear-gradient(160deg, #fff9e6 0%, #ffe8f0 50%, #e8f8ff 100%);
+}
+
+.card {
+  border: 2px solid #ffe0d0;
+  box-shadow: var(--shadow);
+}
+
+.start-title {
+  color: #ff6b35;
+}
+
+.start-intro {
+  color: #2d3436;
+}
+
+.start-notice {
+  color: #e17055;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: #ff6b35;
+}
+
+.start-bottom .age-group,
+.age-group {
+  border-color: #ffc9b0;
+  background: #fffaf7;
+}
+
+.age-option:active {
+  background: #fff0e8;
+}
+
+.age-option input[type="radio"] {
+  accent-color: #ff6b35;
+}
+
+.btn {
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 50%, #ffb347 100%);
+}
+
+.btn-primary:active {
+  background: linear-gradient(135deg, #e85a28 0%, #ff6b35 100%);
+}
+
+.card-image-wrap {
+  border: 2px solid #ffd4c2;
+  background: #fffaf7;
+}
+
+.option-btn {
+  background: #fffaf7;
+  border-color: #ffd4c2;
+  border-radius: 14px;
+}
+
+.option-btn.selected {
+  border-color: #ff6b35;
+  background: #fff0e8;
+  font-weight: 600;
+}
+
+.option-btn:active {
+  background: #ffe8dc;
+}
+
+.complete-title {
+  color: #00b894;
+}
+
+.complete-time {
+  border-top-color: #ffd4c2;
+}
+
+.complete-time-value {
+  color: #ff6b35;
+}
+
+.already-title {
+  color: #ff6b35;
+}
+
+.btn-test-reset-fixed {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: #ffc9b0;
+  color: #e17055;
+}
