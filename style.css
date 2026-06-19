@@ -530,6 +530,32 @@ body {
   word-break: keep-all;
 }
 
+.complete-answer-text {
+  font-size: var(--complete-text-size);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.4;
+  flex-shrink: 0;
+  word-break: keep-all;
+  margin-bottom: 4px;
+}
+
+.complete-answer-blink {
+  animation: complete-answer-blink 1s ease-in-out 3;
+}
+
+@keyframes complete-answer-blink {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 95% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .complete-staff-notice {
   font-size: var(--complete-text-size);
   font-weight: 600;

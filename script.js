@@ -131,6 +131,7 @@ const typeError = document.getElementById("type-error");
 const quizError = document.getElementById("quiz-error");
 const quizWrong = document.getElementById("quiz-wrong");
 const participationTime = document.getElementById("participation-time");
+const completeAnswerText = document.getElementById("complete-answer-text");
 
 function showScreen(name) {
   Object.values(screens).forEach((el) => el.classList.add("hidden"));
@@ -187,6 +188,14 @@ function renderQuiz() {
 function showComplete() {
   const now = new Date();
   participationTime.textContent = formatDateTime(now);
+
+  if (currentCard) {
+    completeAnswerText.textContent = currentCard.options[currentCard.answer];
+    completeAnswerText.classList.remove("complete-answer-blink");
+    void completeAnswerText.offsetWidth;
+    completeAnswerText.classList.add("complete-answer-blink");
+  }
+
   localStorage.setItem(STORAGE_KEY, "true");
   showScreen("complete");
 }
