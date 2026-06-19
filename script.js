@@ -81,7 +81,7 @@ const cards = [
   {
     id: 8,
     image: "images/card8.png",
-    question: "치아 사이 청소가 필요한 가장 큰 이유는?",
+    question: "치아 사이 관리가 필요한 가장 큰 이유는?",
     options: [
       "치아 색을 유지하기 위해서",
       "구강질환의 위험을 감소시키기 위해서",
