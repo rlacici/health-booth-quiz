@@ -481,16 +481,6 @@ body {
   flex-shrink: 0;
 }
 
-.btn-card-quiz-blink {
-  animation: btn-card-quiz-blink 1s ease-in-out infinite;
-}
-
-@keyframes btn-card-quiz-blink {
-  0%, 45% { opacity: 1; }
-  50%, 95% { opacity: 0.35; }
-  100% { opacity: 1; }
-}
-
 /* ── 퀴즈 ── */
 
 .quiz-screen {

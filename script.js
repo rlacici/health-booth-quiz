@@ -133,24 +133,11 @@ const quizWrong = document.getElementById("quiz-wrong");
 const participationTime = document.getElementById("participation-time");
 const completeAnswerText = document.getElementById("complete-answer-text");
 const typeHeading = document.getElementById("type-heading");
-const btnGoQuiz = document.getElementById("btn-go-quiz");
 
 function updateTypeHeadingBlink() {
   if (!typeHeading) return;
   const typeSelected = document.querySelector('input[name="health-type"]:checked');
   typeHeading.classList.toggle("type-heading-blink", !typeSelected);
-}
-
-function startCardQuizBtnBlink() {
-  if (btnGoQuiz) {
-    btnGoQuiz.classList.add("btn-card-quiz-blink");
-  }
-}
-
-function stopCardQuizBtnBlink() {
-  if (btnGoQuiz) {
-    btnGoQuiz.classList.remove("btn-card-quiz-blink");
-  }
 }
 
 function showScreen(name) {
@@ -258,11 +245,9 @@ function init() {
     const card = pickRandomCard();
     renderCardNews(card);
     showScreen("card");
-    startCardQuizBtnBlink();
   });
 
   document.getElementById("btn-go-quiz").addEventListener("click", () => {
-    stopCardQuizBtnBlink();
     renderQuiz();
     showScreen("quiz");
   });
