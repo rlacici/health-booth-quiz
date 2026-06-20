@@ -167,6 +167,9 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: clamp(1rem, 4.2vw, 1.2rem);
   font-weight: 800;
   color: var(--color-primary);
@@ -176,16 +179,28 @@ body {
   text-align: left;
 }
 
+.start-org-mark {
+  width: clamp(1.15rem, 4.8vw, 1.35rem);
+  height: clamp(1.15rem, 4.8vw, 1.35rem);
+  flex-shrink: 0;
+}
+
+.start-org-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .start-header {
   flex: 1 1 50%;
   min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  gap: clamp(8px, 1.8vh, 14px);
-  padding: clamp(28px, 5vh, 36px) 4px clamp(6px, 1.2vh, 12px);
+  gap: clamp(8px, 1.6vh, 12px);
+  padding: clamp(22px, 4.2vh, 30px) 4px clamp(6px, 1.2vh, 10px);
   width: 100%;
 }
 
@@ -196,6 +211,7 @@ body {
   border: 2px solid rgba(139, 124, 246, 0.28);
   border-radius: clamp(19px, 4.8vw, 29px);
   box-shadow: 0 8px 28px rgba(139, 124, 246, 0.14);
+  transform: translateY(-6px);
 }
 
 .start-event-title {
@@ -260,6 +276,16 @@ body {
   margin-bottom: 6px;
   word-break: keep-all;
   line-height: 1.35;
+}
+
+.type-heading-blink {
+  animation: type-heading-blink 1s ease-in-out infinite;
+}
+
+@keyframes type-heading-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0.25; }
+  100% { opacity: 1; }
 }
 
 .type-options {
@@ -327,6 +353,13 @@ body {
   font-size: clamp(1.23rem, 5.3vw, 1.37rem);
   font-weight: 700;
   color: var(--color-text);
+}
+
+.start-bottom .btn-start-card {
+  font-size: clamp(1.9rem, 8vw, 2.1rem);
+  min-height: clamp(56px, 8vh, 64px);
+  padding: clamp(14px, 2vh, 18px) 16px;
+  line-height: 1.25;
 }
 
 .start-bottom .btn {
@@ -421,10 +454,10 @@ body {
 }
 
 .btn-card-quiz {
-  font-size: clamp(1.52rem, 6.2vw, 1.73rem);
+  font-size: clamp(1.22rem, 5vw, 1.38rem);
   line-height: 1.35;
-  padding: clamp(14px, 2vh, 16px) 12px;
-  min-height: clamp(52px, 7.5vh, 58px);
+  padding: clamp(13px, 1.9vh, 15px) 12px;
+  min-height: clamp(48px, 7vh, 54px);
 }
 
 /* ── 퀴즈 ── */
@@ -608,7 +641,7 @@ body {
 }
 
 .complete-answer-blink {
-  animation: complete-answer-blink 1s ease-in-out 3;
+  animation: complete-answer-blink 1s ease-in-out 5;
 }
 
 @keyframes complete-answer-blink {
@@ -693,7 +726,8 @@ body {
   .start-notice { font-size: clamp(1rem, 4.2vw, 1.2rem); margin-top: 4px; }
   .type-heading { font-size: clamp(1.02rem, 4.2vw, 1.19rem); margin-bottom: 4px; }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
-  .btn-card-quiz { font-size: clamp(1.4rem, 5.8vw, 1.6rem); min-height: 50px; }
+  .btn-card-quiz { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
+  .btn-start-card { font-size: clamp(1.7rem, 7.2vw, 1.9rem); min-height: 52px; }
   .question { font-size: clamp(1.85rem, 8.5vw, 2.35rem); margin-bottom: 10px; }
   .quiz-screen .error,
   .quiz-screen .wrong { font-size: clamp(1.45rem, 6.2vw, 1.7rem); }
@@ -712,7 +746,8 @@ body {
   .start-notice { font-size: clamp(0.94rem, 3.9vw, 1.1rem); margin-top: 3px; }
   .type-heading { font-size: clamp(0.91rem, 3.9vw, 1.09rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
-  .btn-card-quiz { font-size: clamp(1.3rem, 5.4vw, 1.52rem); min-height: 48px; }
+  .btn-card-quiz { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
+  .btn-start-card { font-size: clamp(1.55rem, 6.8vw, 1.75rem); min-height: 50px; }
   .type-options { gap: 3px; margin-bottom: 3px; }
   .type-card { padding: 5px 10px; gap: 8px; }
   .question { font-size: clamp(1.6rem, 7.8vw, 2rem); }

@@ -132,6 +132,13 @@ const quizError = document.getElementById("quiz-error");
 const quizWrong = document.getElementById("quiz-wrong");
 const participationTime = document.getElementById("participation-time");
 const completeAnswerText = document.getElementById("complete-answer-text");
+const typeHeading = document.getElementById("type-heading");
+
+function updateTypeHeadingBlink() {
+  if (!typeHeading) return;
+  const typeSelected = document.querySelector('input[name="health-type"]:checked');
+  typeHeading.classList.toggle("type-heading-blink", !typeSelected);
+}
 
 function showScreen(name) {
   Object.values(screens).forEach((el) => el.classList.add("hidden"));
@@ -218,10 +225,12 @@ function init() {
   }
 
   showScreen("start");
+  updateTypeHeadingBlink();
 
   document.querySelectorAll('input[name="health-type"]').forEach((input) => {
     input.addEventListener("change", () => {
       typeError.classList.add("hidden");
+      updateTypeHeadingBlink();
     });
   });
 
