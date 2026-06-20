@@ -191,17 +191,17 @@ body {
 
 .start-title-frame {
   width: 100%;
-  padding: clamp(14px, 2.5vh, 22px) clamp(18px, 5vw, 30px);
+  padding: clamp(11px, 2vh, 18px) clamp(14px, 4vw, 24px);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 242, 255, 0.9) 100%);
   border: 2px solid rgba(139, 124, 246, 0.28);
-  border-radius: clamp(24px, 6vw, 36px);
+  border-radius: clamp(19px, 4.8vw, 29px);
   box-shadow: 0 8px 28px rgba(139, 124, 246, 0.14);
 }
 
 .start-event-title {
   width: 100%;
   max-width: 100%;
-  font-size: clamp(2rem, 10vw, 2.85rem);
+  font-size: clamp(1.6rem, 8vw, 2.28rem);
   font-weight: 800;
   line-height: 1.2;
   color: var(--color-text);
@@ -220,14 +220,16 @@ body {
   line-height: 1.42;
   word-break: keep-all;
   overflow-wrap: break-word;
+  margin-bottom: 0;
 }
 
 .start-notice {
-  font-size: clamp(1.85rem, 7.8vw, 2.25rem);
+  font-size: clamp(0.56rem, 2.34vw, 0.68rem);
   font-weight: 700;
-  color: var(--color-text-muted);
-  line-height: 1.35;
+  color: #e53935;
+  line-height: 1.2;
   word-break: keep-all;
+  margin-top: clamp(3px, 0.6vh, 6px);
 }
 
 .start-bottom {
@@ -264,11 +266,12 @@ body {
 .type-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   width: 100%;
   flex: 1;
   min-height: 0;
-  text-align: left;
+  text-align: center;
   background: var(--color-surface-solid);
   border: 2px solid transparent;
   border-radius: var(--radius-sm);
@@ -410,10 +413,10 @@ body {
 }
 
 .btn-card-quiz {
-  font-size: clamp(1.65rem, 6.8vw, 1.9rem);
+  font-size: clamp(0.95rem, 3.9vw, 1.08rem);
   line-height: 1.35;
-  padding: clamp(14px, 2vh, 18px) 12px;
-  min-height: clamp(56px, 8vh, 64px);
+  padding: clamp(12px, 1.8vh, 14px) 12px;
+  min-height: clamp(46px, 6.5vh, 52px);
 }
 
 /* ── 퀴즈 ── */
@@ -673,12 +676,13 @@ body {
 @media (max-height: 700px) {
   html { font-size: 15px; }
   .start-header { gap: 6px; padding-top: 26px; }
-  .start-event-title { font-size: clamp(1.75rem, 9vw, 2.35rem); }
+  .start-event-title { font-size: clamp(1.4rem, 7.2vw, 1.88rem); }
   .start-guide,
   .start-notice { font-size: clamp(1.55rem, 7vw, 1.85rem); }
+  .start-notice { font-size: clamp(0.5rem, 2.1vw, 0.6rem); }
   .type-heading { font-size: clamp(1.02rem, 4.2vw, 1.19rem); margin-bottom: 4px; }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
-  .btn-card-quiz { font-size: clamp(1.45rem, 6.2vw, 1.65rem); }
+  .btn-card-quiz { font-size: clamp(0.88rem, 3.6vw, 1rem); min-height: 44px; }
   .question { font-size: clamp(1.85rem, 8.5vw, 2.35rem); margin-bottom: 10px; }
   .quiz-screen .error,
   .quiz-screen .wrong { font-size: clamp(1.45rem, 6.2vw, 1.7rem); }
@@ -692,12 +696,13 @@ body {
 @media (max-height: 600px) {
   html { font-size: 14px; }
   .start-header { gap: 4px; padding-top: 24px; }
-  .start-event-title { font-size: clamp(1.55rem, 8.5vw, 2rem); }
+  .start-event-title { font-size: clamp(1.24rem, 6.8vw, 1.6rem); }
   .start-guide,
   .start-notice { font-size: clamp(1.35rem, 6.5vw, 1.6rem); line-height: 1.35; }
+  .start-notice { font-size: clamp(0.47rem, 1.95vw, 0.55rem); margin-top: 3px; }
   .type-heading { font-size: clamp(0.91rem, 3.9vw, 1.09rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
-  .btn-card-quiz { font-size: clamp(1.3rem, 5.8vw, 1.5rem); }
+  .btn-card-quiz { font-size: clamp(0.82rem, 3.4vw, 0.95rem); min-height: 42px; }
   .type-options { gap: 3px; margin-bottom: 3px; }
   .type-card { padding: 5px 10px; gap: 8px; }
   .question { font-size: clamp(1.6rem, 7.8vw, 2rem); }
