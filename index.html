@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
-  <link rel="stylesheet" href="style.css?v=28">
+  <link rel="stylesheet" href="style.css?v=29">
   <link rel="stylesheet" href="theme-playful.css?v=1">
 </head>
 <body>
@@ -82,7 +82,7 @@
     <!-- 카드뉴스 -->
     <section id="screen-card" class="screen hidden">
       <div class="screen-inner card-news-screen">
-        <p class="screen-badge">오늘의 카드</p>
+        <p class="screen-badge card-screen-badge">오늘의 카드</p>
         <div class="card-image-wrap card-image-full">
           <img id="card-image" src="" alt="구강건강 카드뉴스">
         </div>
@@ -96,9 +96,11 @@
         <p class="screen-badge">Q. 퀴즈</p>
         <p id="quiz-question" class="question"></p>
         <div id="quiz-options" class="options"></div>
-        <p id="quiz-error" class="error hidden">선택지를 골라주세요</p>
-        <p id="quiz-wrong" class="wrong hidden">앗, 다시 골라볼까요? 💭</p>
-        <button type="button" id="btn-check" class="btn btn-primary btn-quiz-check">정답 확인</button>
+        <div class="quiz-footer">
+          <p id="quiz-error" class="error hidden">선택지를 골라주세요</p>
+          <p id="quiz-wrong" class="wrong hidden">앗, 다시 골라볼까요? 💭</p>
+          <button type="button" id="btn-check" class="btn btn-primary btn-quiz-check">정답 확인</button>
+        </div>
       </div>
     </section>
 
@@ -124,6 +126,6 @@
 
   <button type="button" id="btn-test-reset" class="btn-test-reset-fixed" title="테스트용">테스트 초기화</button>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>

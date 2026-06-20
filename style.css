@@ -425,8 +425,23 @@ body {
 /* ── 카드뉴스 ── */
 
 .card-news-screen {
-  justify-content: center;
-  gap: 14px;
+  justify-content: flex-start;
+  gap: clamp(4px, 0.8vh, 6px);
+  padding: 0 0 4px;
+}
+
+.card-news-screen .card-screen-badge {
+  align-self: center;
+  margin: 0 0 clamp(4px, 0.6vh, 6px);
+  padding: 4px 12px;
+  font-size: 0.72rem;
+}
+
+.card-news-screen .card-image-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  margin-bottom: clamp(6px, 1vh, 8px);
 }
 
 .card-image-wrap {
@@ -463,14 +478,25 @@ body {
   line-height: 1.35;
   padding: clamp(13px, 1.9vh, 15px) 12px;
   min-height: clamp(48px, 7vh, 54px);
+  flex-shrink: 0;
+}
+
+.btn-card-quiz-blink {
+  animation: btn-card-quiz-blink 1s ease-in-out infinite;
+}
+
+@keyframes btn-card-quiz-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0.35; }
+  100% { opacity: 1; }
 }
 
 /* ── 퀴즈 ── */
 
 .quiz-screen {
-  justify-content: center;
-  gap: 6px;
-  padding-top: 8px;
+  justify-content: flex-start;
+  gap: 0;
+  padding-top: 4px;
 }
 
 .question {
@@ -491,10 +517,31 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   flex: 1;
   min-height: 0;
   justify-content: center;
+}
+
+.quiz-footer {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(8px, 1.4vh, 12px);
+  margin-top: auto;
+  padding-top: clamp(10px, 1.8vh, 14px);
+}
+
+.quiz-footer .error,
+.quiz-footer .wrong {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.quiz-footer .btn-quiz-check {
+  margin-top: 0;
 }
 
 .option-btn {
@@ -536,7 +583,6 @@ body {
 .quiz-screen .error,
 .quiz-screen .wrong {
   font-size: clamp(1.7rem, 6.8vw, 1.95rem);
-  margin-bottom: 10px;
   line-height: 1.4;
   word-break: keep-all;
 }
@@ -738,6 +784,7 @@ body {
   .quiz-screen .wrong { font-size: clamp(1.45rem, 6.2vw, 1.7rem); }
   .option-btn { min-height: 64px; padding: 14px 14px; font-size: clamp(1.35rem, 6vw, 1.5rem); }
   .quiz-screen .btn-quiz-check { font-size: clamp(1.45rem, 6vw, 1.65rem); min-height: 54px; }
+  .card-news-screen .card-image-wrap { max-height: none; }
   .card-image-wrap { max-height: 50vh; }
   .complete-content { --complete-text-size: clamp(1.25rem, 5.8vw, 1.75rem); gap: 10px; }
   .complete-emoji { font-size: clamp(2.6rem, 12vw, 4rem); }
@@ -761,6 +808,7 @@ body {
   .options { gap: 6px; margin-bottom: 8px; }
   .option-btn { min-height: 56px; padding: 12px 12px; font-size: clamp(1.2rem, 5.5vw, 1.35rem); }
   .quiz-screen .btn-quiz-check { font-size: clamp(1.3rem, 5.8vw, 1.5rem); min-height: 50px; }
+  .card-news-screen .card-image-wrap { max-height: none; }
   .card-image-wrap { max-height: 44vh; }
   .complete-content { --complete-text-size: clamp(1.15rem, 5.5vw, 1.6rem); gap: 8px; }
 }
