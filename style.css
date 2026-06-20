@@ -180,15 +180,16 @@ body {
 }
 
 .start-org-mark {
-  width: clamp(1.15rem, 4.8vw, 1.35rem);
-  height: clamp(1.15rem, 4.8vw, 1.35rem);
+  width: clamp(1.35rem, 5.5vw, 1.6rem);
+  height: clamp(1.35rem, 5.5vw, 1.6rem);
   flex-shrink: 0;
 }
 
-.start-org-mark svg {
+.start-org-mark img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .start-header {
@@ -356,10 +357,14 @@ body {
 }
 
 .start-bottom .btn-start-card {
-  font-size: clamp(1.9rem, 8vw, 2.1rem);
-  min-height: clamp(56px, 8vh, 64px);
-  padding: clamp(14px, 2vh, 18px) 16px;
-  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(3.42rem, 14.4vw, 3.78rem);
+  min-height: clamp(64px, 9vh, 76px);
+  padding: clamp(16px, 2.2vh, 20px) 16px;
+  line-height: 1.2;
 }
 
 .start-bottom .btn {
@@ -727,7 +732,7 @@ body {
   .type-heading { font-size: clamp(1.02rem, 4.2vw, 1.19rem); margin-bottom: 4px; }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
   .btn-card-quiz { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
-  .btn-start-card { font-size: clamp(1.7rem, 7.2vw, 1.9rem); min-height: 52px; }
+  .btn-start-card { font-size: clamp(3.06rem, 13vw, 3.42rem); min-height: 60px; }
   .question { font-size: clamp(1.85rem, 8.5vw, 2.35rem); margin-bottom: 10px; }
   .quiz-screen .error,
   .quiz-screen .wrong { font-size: clamp(1.45rem, 6.2vw, 1.7rem); }
@@ -747,7 +752,7 @@ body {
   .type-heading { font-size: clamp(0.91rem, 3.9vw, 1.09rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
   .btn-card-quiz { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
-  .btn-start-card { font-size: clamp(1.55rem, 6.8vw, 1.75rem); min-height: 50px; }
+  .btn-start-card { font-size: clamp(2.79rem, 12.2vw, 3.15rem); min-height: 56px; }
   .type-options { gap: 3px; margin-bottom: 3px; }
   .type-card { padding: 5px 10px; gap: 8px; }
   .question { font-size: clamp(1.6rem, 7.8vw, 2rem); }
