@@ -48,7 +48,7 @@ const cards = [
   {
     id: 5,
     image: "images/card5.png",
-    question: "틀니 관리법으로 올바른 것은??",
+    question: "틀니 관리법으로 올바른 것은?",
     options: [
       "잠잘 때는 빼고 찬물에 보관한다 ",
       "치약을 사용하여 닦는다",
