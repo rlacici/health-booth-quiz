@@ -15,10 +15,10 @@ const cards = [
   {
     id: 2,
     image: "images/card2.png",
-    question: "잠자는 동안 입속 세균은 어떻게 될까요?",
+    question: "잠자는 동안 입속 환경은 어떻게 변할까요?",
     options: [
-      "줄어든다",
-      "늘어날 수 있다",
+      "세균이 줄어든다",
+      "침분비가 줄어 세균이 늘어날 수 있다",
       "변화 없다"
     ],
     answer: 1
