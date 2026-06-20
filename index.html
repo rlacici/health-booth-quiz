@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
-  <link rel="stylesheet" href="style.css?v=22">
+  <link rel="stylesheet" href="style.css?v=23">
   <link rel="stylesheet" href="theme-playful.css?v=1">
 </head>
 <body>
@@ -35,13 +35,15 @@
       <div class="screen-inner start-screen">
         <p class="start-org">미추홀구보건소</p>
         <header class="start-header">
-          <h1 class="start-event-title">구강건강 퀴즈</h1>
+          <div class="start-title-frame">
+            <h1 class="start-event-title">구강건강 퀴즈</h1>
+          </div>
           <p class="start-guide">오늘의 카드를 보고<br>퀴즈를 맞추시면<br>선물을 드려요 🎁</p>
           <p class="start-notice">1인 1회 참여</p>
         </header>
 
         <div class="start-bottom">
-          <h2 class="type-heading">유형을 선택해주세요</h2>
+          <h2 class="type-heading">자신의 구강관리 유형을 먼저 선택해주세요!</h2>
           <div class="type-options" role="radiogroup" aria-label="구강건강 유형 선택">
             <label class="type-card">
               <input type="radio" name="health-type" value="lazy">
@@ -89,7 +91,7 @@
         <div id="quiz-options" class="options"></div>
         <p id="quiz-error" class="error hidden">선택지를 골라주세요</p>
         <p id="quiz-wrong" class="wrong hidden">앗, 다시 골라볼까요? 💭</p>
-        <button type="button" id="btn-check" class="btn btn-primary">정답 확인</button>
+        <button type="button" id="btn-check" class="btn btn-primary btn-quiz-check">정답 확인</button>
       </div>
     </section>
 
