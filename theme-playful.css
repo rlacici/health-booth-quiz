@@ -1,0 +1,22 @@
+/* MBTI·심리테스트 앱 스타일 보조 테마 */
+
+.start-bottom .btn {
+  margin-top: 4px;
+}
+
+.type-card:hover {
+  box-shadow: 0 12px 28px rgba(139, 124, 246, 0.14);
+}
+
+.option-btn:hover {
+  box-shadow: 0 12px 28px rgba(139, 124, 246, 0.12);
+}
+
+.complete-staff-notice {
+  animation: gentle-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { box-shadow: var(--shadow-soft); }
+  50% { box-shadow: 0 0 0 6px rgba(139, 124, 246, 0.12), var(--shadow-soft); }
+}
