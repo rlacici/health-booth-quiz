@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="stylesheet" href="style.css?v=22">
   <link rel="stylesheet" href="theme-playful.css?v=1">
 </head>
 <body>
@@ -33,16 +33,15 @@
     <!-- 첫 화면 -->
     <section id="screen-start" class="screen">
       <div class="screen-inner start-screen">
+        <p class="start-org">미추홀구보건소</p>
         <header class="start-header">
-          <p class="start-org">미추홀구보건소</p>
           <h1 class="start-event-title">구강건강 퀴즈</h1>
-          <p class="start-intro">카드를 보고 퀴즈를 맞혀보세요</p>
-          <p class="start-gift">정답이면 선물을 드려요 🎁</p>
+          <p class="start-guide">오늘의 카드를 보고<br>퀴즈를 맞추시면<br>선물을 드려요 🎁</p>
           <p class="start-notice">1인 1회 참여</p>
         </header>
 
         <div class="start-bottom">
-          <h2 class="type-heading">나의 구강건강 유형은?</h2>
+          <h2 class="type-heading">유형을 선택해주세요</h2>
           <div class="type-options" role="radiogroup" aria-label="구강건강 유형 선택">
             <label class="type-card">
               <input type="radio" name="health-type" value="lazy">
@@ -78,7 +77,7 @@
         <div class="card-image-wrap card-image-full">
           <img id="card-image" src="" alt="구강건강 카드뉴스">
         </div>
-        <button type="button" id="btn-go-quiz" class="btn btn-primary">퀴즈 풀기 →</button>
+        <button type="button" id="btn-go-quiz" class="btn btn-primary btn-card-quiz">이미지를 기억하면서 퀴즈 풀기</button>
       </div>
     </section>
 
@@ -99,13 +98,15 @@
       <div class="screen-inner complete-screen">
         <div class="complete-content">
           <p class="complete-emoji">🎉</p>
-          <h1 class="complete-title">참여 완료!</h1>
           <p id="complete-answer-text" class="complete-answer-text"></p>
           <p class="complete-message">정답이에요</p>
+          <h1 class="complete-title">참여 완료!</h1>
           <div class="complete-time">
             <p class="complete-staff-notice">📱 직원에게 이 화면을 보여주세요</p>
-            <p class="complete-time-label">참여시간</p>
-            <p id="participation-time" class="complete-time-value"></p>
+            <div class="complete-time-center">
+              <p class="complete-time-label">참여시간</p>
+              <p id="participation-time" class="complete-time-value"></p>
+            </div>
           </div>
         </div>
       </div>
