@@ -136,6 +136,7 @@ const completeAnswerText = document.getElementById("complete-answer-text");
 const typeHeading = document.getElementById("type-heading");
 const alreadyCardImage = document.getElementById("already-card-image");
 const alreadyCardWrap = document.querySelector(".already-card-wrap");
+const alreadyMessage = document.querySelector(".already-message");
 
 function updateTypeHeadingBlink() {
   if (!typeHeading) return;
@@ -172,6 +173,12 @@ function showAlreadyScreen() {
     alreadyCardWrap?.classList.remove("hidden");
   } else {
     alreadyCardWrap?.classList.add("hidden");
+  }
+
+  if (alreadyMessage) {
+    alreadyMessage.classList.remove("already-message-blink");
+    void alreadyMessage.offsetWidth;
+    alreadyMessage.classList.add("already-message-blink");
   }
 
   showScreen("already");

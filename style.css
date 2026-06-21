@@ -632,6 +632,31 @@ body {
   word-break: keep-all;
 }
 
+.already-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2px, 0.5vh, 4px);
+}
+
+.already-thanks {
+  font-size: clamp(1.2rem, 5.4vw, 1.55rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.already-message-blink {
+  animation: already-message-blink 1s ease-in-out 5;
+}
+
+@keyframes already-message-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
 .already-card-wrap {
   flex: 1 1 auto;
   min-height: 0;
