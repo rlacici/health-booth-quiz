@@ -207,7 +207,11 @@ body {
 
 .start-title-frame {
   width: 100%;
-  padding: clamp(11px, 2vh, 18px) clamp(14px, 4vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(13px, 1.9vh, 15px) 16px;
+  min-height: clamp(48px, 7vh, 54px);
   background: linear-gradient(135deg, var(--color-primary) 0%, #a78bfa 55%, var(--color-accent) 100%);
   border: none;
   border-radius: var(--radius-pill);
@@ -218,11 +222,11 @@ body {
 .start-event-title {
   width: 100%;
   max-width: 100%;
-  font-size: clamp(1.6rem, 8vw, 2.28rem);
-  font-weight: 800;
-  line-height: 1.2;
+  font-size: clamp(1.22rem, 5vw, 1.38rem);
+  font-weight: 700;
+  line-height: 1.35;
   color: #fff;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   word-break: keep-all;
   overflow-wrap: break-word;
   text-align: center;
@@ -270,7 +274,7 @@ body {
 
 .type-heading {
   flex-shrink: 0;
-  font-size: clamp(1.23rem, 5.3vw, 1.37rem);
+  font-size: clamp(2.21rem, 9.5vw, 2.47rem);
   font-weight: 700;
   color: var(--color-primary);
   text-align: center;
@@ -762,10 +766,11 @@ body {
 @media (max-height: 700px) {
   html { font-size: 15px; }
   .start-header { gap: 6px; padding-top: 26px; }
-  .start-event-title { font-size: clamp(1.4rem, 7.2vw, 1.88rem); }
+  .start-title-frame { min-height: 46px; padding: clamp(12px, 1.7vh, 14px) 16px; }
+  .start-event-title { font-size: clamp(1.12rem, 4.6vw, 1.28rem); }
   .start-guide,
   .start-notice { font-size: clamp(1rem, 4.2vw, 1.2rem); margin-top: 4px; }
-  .type-heading { font-size: clamp(1.1rem, 4.8vw, 1.25rem); margin-bottom: 4px; }
+  .type-heading { font-size: clamp(1.98rem, 8.6vw, 2.25rem); margin-bottom: 4px; }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
   .btn-card-quiz { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
   .start-bottom .btn.btn-start-card { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
@@ -783,10 +788,11 @@ body {
 @media (max-height: 600px) {
   html { font-size: 14px; }
   .start-header { gap: 4px; padding-top: 24px; }
-  .start-event-title { font-size: clamp(1.24rem, 6.8vw, 1.6rem); }
+  .start-title-frame { min-height: 44px; }
+  .start-event-title { font-size: clamp(1.04rem, 4.3vw, 1.22rem); }
   .start-guide,
   .start-notice { font-size: clamp(0.94rem, 3.9vw, 1.1rem); margin-top: 3px; }
-  .type-heading { font-size: clamp(1rem, 4.4vw, 1.15rem); }
+  .type-heading { font-size: clamp(1.8rem, 7.9vw, 2.07rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
   .btn-card-quiz { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
   .start-bottom .btn.btn-start-card { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
