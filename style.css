@@ -208,10 +208,10 @@ body {
 .start-title-frame {
   width: 100%;
   padding: clamp(11px, 2vh, 18px) clamp(14px, 4vw, 24px);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 242, 255, 0.9) 100%);
-  border: 2px solid rgba(139, 124, 246, 0.28);
-  border-radius: clamp(19px, 4.8vw, 29px);
-  box-shadow: 0 8px 28px rgba(139, 124, 246, 0.14);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #a78bfa 55%, var(--color-accent) 100%);
+  border: none;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 24px rgba(139, 124, 246, 0.35);
   transform: translateY(-6px);
 }
 
@@ -221,7 +221,7 @@ body {
   font-size: clamp(1.6rem, 8vw, 2.28rem);
   font-weight: 800;
   line-height: 1.2;
-  color: var(--color-text);
+  color: #fff;
   letter-spacing: -0.03em;
   word-break: keep-all;
   overflow-wrap: break-word;
