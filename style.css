@@ -290,7 +290,7 @@ body {
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 0;
-  margin-top: clamp(-4px, -0.6vh, -2px);
+  margin-top: calc(-1.35em - 4px);
   word-break: keep-all;
   line-height: 1.35;
 }
