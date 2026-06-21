@@ -238,19 +238,7 @@ function showComplete() {
   showScreen("complete");
 }
 
-function resetParticipation() {
-  localStorage.removeItem(STORAGE_KEY);
-  localStorage.removeItem(STORAGE_CARD_KEY);
-  location.reload();
-}
-
-function bindTestResetButton() {
-  document.getElementById("btn-test-reset").addEventListener("click", resetParticipation);
-}
-
 function init() {
-  bindTestResetButton();
-
   if (localStorage.getItem(STORAGE_KEY) === "true") {
     showAlreadyScreen();
     return;

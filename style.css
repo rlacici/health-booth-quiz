@@ -624,7 +624,8 @@ body {
   line-height: 1;
 }
 
-.already-title {
+.already-title,
+.already-thanks {
   font-size: clamp(1.35rem, 6vw, 1.75rem);
   font-weight: 800;
   color: var(--color-text);
@@ -637,14 +638,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: clamp(2px, 0.5vh, 4px);
-}
-
-.already-thanks {
-  font-size: clamp(1.2rem, 5.4vw, 1.55rem);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.3;
-  word-break: keep-all;
 }
 
 .already-message-blink {
@@ -781,28 +774,6 @@ body {
   line-height: 1.3;
   word-break: keep-all;
   text-align: center;
-}
-
-.btn-test-reset-fixed {
-  display: block;
-  position: fixed;
-  bottom: 8px;
-  right: 8px;
-  z-index: 100;
-  cursor: pointer;
-  font-family: inherit;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px dashed rgba(139, 124, 246, 0.35);
-  color: var(--color-text-muted);
-  font-size: 0.72rem;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(6px);
-}
-
-.btn-test-reset-fixed:active {
-  background: rgba(255, 255, 255, 0.95);
 }
 
 @media (max-height: 700px) {
