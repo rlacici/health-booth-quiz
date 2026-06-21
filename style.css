@@ -604,39 +604,43 @@ body {
 /* ── 이미 참여 ── */
 
 .already-screen {
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-top: clamp(6px, 1vh, 10px);
+  gap: clamp(8px, 1.2vh, 12px);
 }
 
-.already-content {
-  width: 100%;
+.already-header {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: clamp(14px, 3vh, 22px);
+  gap: clamp(4px, 0.8vh, 8px);
   text-align: center;
 }
 
 .already-emoji {
-  font-size: clamp(3rem, 14vw, 4.5rem);
+  font-size: clamp(2.2rem, 10vw, 3rem);
   line-height: 1;
 }
 
 .already-title {
-  font-size: clamp(1.5rem, 6.8vw, 2rem);
+  font-size: clamp(1.35rem, 6vw, 1.75rem);
   font-weight: 800;
   color: var(--color-text);
-  line-height: 1.35;
+  line-height: 1.3;
   word-break: keep-all;
 }
 
-.already-hint {
-  font-size: clamp(1rem, 4.5vw, 1.15rem);
-  font-weight: 600;
-  color: var(--color-text-muted);
-  line-height: 1.4;
-  word-break: keep-all;
+.already-card-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  margin-bottom: clamp(6px, 1vh, 10px);
+}
+
+.already-card-wrap.hidden {
+  display: none;
 }
 
 /* ── 완료 ── */

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>미추홀구보건소 구강건강퀴즈</title>
-  <link rel="stylesheet" href="style.css?v=34">
+  <link rel="stylesheet" href="style.css?v=35">
   <link rel="stylesheet" href="theme-playful.css?v=1">
 </head>
 <body>
@@ -21,11 +21,12 @@
     <!-- 이미 참여 완료 -->
     <section id="screen-already" class="screen hidden">
       <div class="screen-inner already-screen">
-        <div class="already-content">
-          <p class="screen-badge">구강건강 퀴즈</p>
+        <div class="already-header">
           <p class="already-emoji">😊</p>
           <h1 class="already-title">이미 참여하셨어요</h1>
-          <p class="already-hint">1인 1회만 참여 가능해요</p>
+        </div>
+        <div class="already-card-wrap card-image-wrap">
+          <img id="already-card-image" src="" alt="오늘의 카드">
         </div>
       </div>
     </section>
@@ -128,6 +129,6 @@
 
   <button type="button" id="btn-test-reset" class="btn-test-reset-fixed" title="테스트용">테스트 초기화</button>
 
-  <script src="script.js?v=18"></script>
+  <script src="script.js?v=19"></script>
 </body>
 </html>

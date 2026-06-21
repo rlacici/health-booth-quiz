@@ -1,4 +1,5 @@
 const STORAGE_KEY = "completed";
+const STORAGE_CARD_KEY = "lastCardId";
 
 const cards = [
   {
@@ -133,6 +134,8 @@ const quizWrong = document.getElementById("quiz-wrong");
 const participationTime = document.getElementById("participation-time");
 const completeAnswerText = document.getElementById("complete-answer-text");
 const typeHeading = document.getElementById("type-heading");
+const alreadyCardImage = document.getElementById("already-card-image");
+const alreadyCardWrap = document.querySelector(".already-card-wrap");
 
 function updateTypeHeadingBlink() {
   if (!typeHeading) return;
@@ -152,6 +155,26 @@ function formatDateTime(date) {
   const h = String(date.getHours()).padStart(2, "0");
   const min = String(date.getMinutes()).padStart(2, "0");
   return `${y}-${m}-${d} ${h}:${min}`;
+}
+
+function getCardById(id) {
+  const numericId = Number(id);
+  return cards.find((card) => card.id === numericId) || null;
+}
+
+function showAlreadyScreen() {
+  const savedId = localStorage.getItem(STORAGE_CARD_KEY);
+  const card = savedId ? getCardById(savedId) : null;
+
+  if (card && alreadyCardImage) {
+    alreadyCardImage.src = card.image;
+    alreadyCardImage.alt = "구강건강 카드뉴스";
+    alreadyCardWrap?.classList.remove("hidden");
+  } else {
+    alreadyCardWrap?.classList.add("hidden");
+  }
+
+  showScreen("already");
 }
 
 function pickRandomCard() {
@@ -201,6 +224,7 @@ function showComplete() {
     completeAnswerText.classList.remove("complete-answer-blink");
     void completeAnswerText.offsetWidth;
     completeAnswerText.classList.add("complete-answer-blink");
+    localStorage.setItem(STORAGE_CARD_KEY, String(currentCard.id));
   }
 
   localStorage.setItem(STORAGE_KEY, "true");
@@ -209,6 +233,7 @@ function showComplete() {
 
 function resetParticipation() {
   localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_CARD_KEY);
   location.reload();
 }
 
@@ -220,7 +245,7 @@ function init() {
   bindTestResetButton();
 
   if (localStorage.getItem(STORAGE_KEY) === "true") {
-    showScreen("already");
+    showAlreadyScreen();
     return;
   }
 
