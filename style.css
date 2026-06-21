@@ -106,7 +106,7 @@ body {
   max-width: 480px;
   height: 100dvh;
   margin: 0 auto;
-  padding: 12px 16px 48px;
+  padding: 12px 16px 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@ body {
   background: transparent;
   border: none;
   box-shadow: none;
-  padding: 4px 2px 8px;
+  padding: 4px 2px 4px;
 }
 
 .screen-badge {
@@ -443,8 +443,8 @@ body {
 
 .card-news-screen {
   justify-content: flex-start;
-  gap: clamp(4px, 0.8vh, 6px);
-  padding: 0 0 4px;
+  gap: clamp(6px, 1vh, 8px);
+  padding: 0;
 }
 
 .card-news-screen .card-screen-badge {
@@ -469,7 +469,7 @@ body {
   backdrop-filter: blur(10px);
   flex: 1 1 auto;
   min-height: 0;
-  max-height: 62vh;
+  max-height: 68vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -606,8 +606,8 @@ body {
 .already-screen {
   justify-content: flex-start;
   align-items: stretch;
-  padding-top: clamp(6px, 1vh, 10px);
-  gap: clamp(8px, 1.2vh, 12px);
+  padding-top: clamp(8px, 1.4vh, 14px);
+  gap: clamp(10px, 1.6vh, 14px);
 }
 
 .already-header {
@@ -620,7 +620,7 @@ body {
 }
 
 .already-emoji {
-  font-size: clamp(2.2rem, 10vw, 3rem);
+  font-size: clamp(2.5rem, 11vw, 3.4rem);
   line-height: 1;
 }
 
@@ -654,7 +654,7 @@ body {
   flex: 1 1 auto;
   min-height: 0;
   max-height: none;
-  margin-bottom: clamp(6px, 1vh, 10px);
+  margin-bottom: 0;
 }
 
 .already-card-wrap.hidden {
@@ -793,7 +793,7 @@ body {
   .option-btn { min-height: 64px; padding: 14px 14px; font-size: clamp(1.35rem, 6vw, 1.5rem); }
   .quiz-screen .btn-quiz-check { font-size: clamp(1.45rem, 6vw, 1.65rem); min-height: 54px; }
   .card-news-screen .card-image-wrap { max-height: none; }
-  .card-image-wrap { max-height: 50vh; }
+  .card-image-wrap { max-height: 56vh; }
   .complete-content { --complete-text-size: clamp(1.25rem, 5.8vw, 1.75rem); gap: 10px; }
   .complete-emoji { font-size: clamp(2.6rem, 12vw, 4rem); }
 }
@@ -818,6 +818,6 @@ body {
   .option-btn { min-height: 56px; padding: 12px 12px; font-size: clamp(1.2rem, 5.5vw, 1.35rem); }
   .quiz-screen .btn-quiz-check { font-size: clamp(1.3rem, 5.8vw, 1.5rem); min-height: 50px; }
   .card-news-screen .card-image-wrap { max-height: none; }
-  .card-image-wrap { max-height: 44vh; }
+  .card-image-wrap { max-height: 50vh; }
   .complete-content { --complete-text-size: clamp(1.15rem, 5.5vw, 1.6rem); gap: 8px; }
 }
