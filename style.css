@@ -269,16 +269,26 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  padding-top: 4px;
+  padding-top: clamp(6px, 1.2vh, 10px);
+}
+
+.start-type-block {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(8px, 1.2vh, 12px);
+  margin-bottom: clamp(4px, 0.8vh, 8px);
 }
 
 .type-heading {
   flex-shrink: 0;
-  font-size: clamp(2.21rem, 9.5vw, 2.47rem);
+  font-size: clamp(1.55rem, 6.65vw, 1.73rem);
   font-weight: 700;
   color: var(--color-primary);
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   word-break: keep-all;
   line-height: 1.35;
 }
@@ -299,7 +309,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: clamp(5px, 1vh, 8px);
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .type-card {
@@ -770,7 +780,7 @@ body {
   .start-event-title { font-size: clamp(1.12rem, 4.6vw, 1.28rem); }
   .start-guide,
   .start-notice { font-size: clamp(1rem, 4.2vw, 1.2rem); margin-top: 4px; }
-  .type-heading { font-size: clamp(1.98rem, 8.6vw, 2.25rem); margin-bottom: 4px; }
+  .type-heading { font-size: clamp(1.39rem, 6vw, 1.58rem); }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
   .btn-card-quiz { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
   .start-bottom .btn.btn-start-card { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
@@ -792,7 +802,7 @@ body {
   .start-event-title { font-size: clamp(1.04rem, 4.3vw, 1.22rem); }
   .start-guide,
   .start-notice { font-size: clamp(0.94rem, 3.9vw, 1.1rem); margin-top: 3px; }
-  .type-heading { font-size: clamp(1.8rem, 7.9vw, 2.07rem); }
+  .type-heading { font-size: clamp(1.26rem, 5.5vw, 1.45rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
   .btn-card-quiz { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
   .start-bottom .btn.btn-start-card { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
