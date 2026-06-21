@@ -277,9 +277,10 @@ body {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: clamp(8px, 1.2vh, 12px);
-  margin-bottom: clamp(4px, 0.8vh, 8px);
+  justify-content: flex-start;
+  gap: clamp(6px, 1vh, 10px);
+  margin-bottom: clamp(2px, 0.4vh, 4px);
+  padding-top: clamp(0px, 0.3vh, 2px);
 }
 
 .type-heading {
@@ -289,6 +290,7 @@ body {
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 0;
+  margin-top: clamp(-4px, -0.6vh, -2px);
   word-break: keep-all;
   line-height: 1.35;
 }
@@ -383,10 +385,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: clamp(1.22rem, 5vw, 1.38rem);
-  min-height: clamp(48px, 7vh, 54px);
-  padding: clamp(13px, 1.9vh, 15px) 16px;
+  font-size: clamp(1.3rem, 5.4vw, 1.5rem);
+  min-height: clamp(54px, 8vh, 62px);
+  padding: clamp(15px, 2.2vh, 18px) 16px;
   line-height: 1.35;
+  margin-top: clamp(4px, 0.8vh, 8px);
 }
 
 /* ── 버튼 ── */
@@ -783,7 +786,7 @@ body {
   .type-heading { font-size: clamp(1.39rem, 6vw, 1.58rem); }
   .type-label { font-size: clamp(1.1rem, 4.8vw, 1.25rem); }
   .btn-card-quiz { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
-  .start-bottom .btn.btn-start-card { font-size: clamp(1.12rem, 4.6vw, 1.28rem); min-height: 46px; }
+  .start-bottom .btn.btn-start-card { font-size: clamp(1.2rem, 5vw, 1.4rem); min-height: 52px; }
   .question { font-size: clamp(1.85rem, 8.5vw, 2.35rem); margin-bottom: 10px; }
   .quiz-screen .error,
   .quiz-screen .wrong { font-size: clamp(1.45rem, 6.2vw, 1.7rem); }
@@ -805,7 +808,7 @@ body {
   .type-heading { font-size: clamp(1.26rem, 5.5vw, 1.45rem); }
   .type-label { font-size: clamp(1rem, 4.4vw, 1.15rem); }
   .btn-card-quiz { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
-  .start-bottom .btn.btn-start-card { font-size: clamp(1.04rem, 4.3vw, 1.22rem); min-height: 44px; }
+  .start-bottom .btn.btn-start-card { font-size: clamp(1.12rem, 4.6vw, 1.32rem); min-height: 50px; }
   .type-options { gap: 3px; margin-bottom: 3px; }
   .type-card { padding: 5px 10px; gap: 8px; }
   .question { font-size: clamp(1.6rem, 7.8vw, 2rem); }
